@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+console.log("reached in server.js");
 app.use(express.static(__dirname + '/dist/frontend'));
 app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+
