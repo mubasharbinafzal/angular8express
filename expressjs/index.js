@@ -2,14 +2,14 @@ const express = require ("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const cors     = require("cors");   
-
+const cors     = require("cors");    
 dotenv.config();
 // connect to mongo db 
 mongoose.connect(process.env.DB_CONNECT,
     {useUnifiedTopology: true , useNewUrlParser: true },
     () => console.log("Connected to Mongooes db")
 );
+
 // import routes
 const listingRoutes = require("./routes/listing");
 const userRoutes = require("./routes/user");
